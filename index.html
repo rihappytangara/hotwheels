@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro para Evento Hot Wheels</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 30px;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #222;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 25px;
+      margin-bottom: 8px;
+      color: #111;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    ul {
+      margin-top: 8px;
+      margin-bottom: 18px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .regulamento {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 22px;
+      margin-bottom: 30px;
+    }
+
+    .formulario {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #222;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, button {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 6px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #222;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    .aviso {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .destaque {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Cadastro para Evento Hot Wheels</h1>
+
+    <section class="regulamento">
+      <h2>Regulamento do Evento</h2>
+
+      <h3>1. Objetivo do Evento</h3>
+      <p>
+        O evento tem como objetivo organizar a escolha das miniaturas Hot Wheels de forma
+        <strong>justa, transparente e igual para todos os participantes</strong>,
+        considerando a alta procura pelos produtos.
+      </p>
+
+      <h3>2. Exposição das Miniaturas</h3>
+      <ul>
+        <li>As caixas participantes serão abertas previamente pela organização.</li>
+        <li>As miniaturas ficarão expostas sobre a mesa, visíveis aos participantes antes do início da escolha.</li>
+        <li>Não será permitida reserva antecipada de miniaturas.</li>
+      </ul>
+
+      <h3>3. Cadastro dos Participantes</h3>
+      <ul>
+        <li>O cadastro será realizado por meio deste formulário online.</li>
+        <li>Para participar, é obrigatório informar <strong>Nome Completo</strong>, <strong>Telefone para contato</strong> e enviar uma <strong>Foto do Participante</strong>.</li>
+        <li>Cada participante poderá realizar apenas um cadastro.</li>
+        <li>Cadastros duplicados poderão ser desconsiderados pela organização.</li>
+      </ul>
+
+      <h3>4. Sorteio da Ordem de Escolha</h3>
+      <ul>
+        <li>O sorteio da ordem de escolha será realizado <strong>no local do evento</strong>.</li>
+        <li>A ordem sorteada definirá a sequência em que os participantes serão chamados para escolher as miniaturas.</li>
+        <li>Cada participante deverá aguardar sua vez e respeitar a ordem definida no sorteio.</li>
+      </ul>
+
+      <h3>5. Escolha das Miniaturas</h3>
+      <ul>
+        <li>Quando chamado, o participante poderá escolher <strong>1 (uma) miniatura por vez</strong>.</li>
+        <li>Após a escolha, poderá retornar ao final da fila, caso deseje escolher novamente.</li>
+        <li>O participante também poderá seguir para o caixa para realizar o pagamento da(s) miniatura(s) escolhida(s).</li>
+        <li>O processo continuará enquanto houver interesse dos participantes e miniaturas disponíveis.</li>
+      </ul>
+
+      <h3>6. Regras Gerais</h3>
+      <p><strong>Não será permitido:</strong></p>
+      <ul>
+        <li>Guardar lugar para terceiros;</li>
+        <li>Reservar miniaturas antes ou durante o processo de escolha;</li>
+        <li>Trocar miniaturas durante a escolha;</li>
+        <li>Interferir na escolha de outros participantes.</li>
+      </ul>
+
+      <p><strong>A organização poderá:</strong></p>
+      <ul>
+        <li>Resolver situações não previstas neste regulamento;</li>
+        <li>Tomar decisões para manter a ordem e o bom andamento do evento;</li>
+        <li>Excluir participantes que não cumprirem as regras.</li>
+      </ul>
+
+      <p>
+        <strong>Ao participar do evento, o cliente declara estar ciente e de acordo com este regulamento.</strong>
+      </p>
+    </section>
+
+    <section class="formulario">
+      <h2>Formulário de Cadastro</h2>
+
+      <form 
+        action="https://submify.vercel.app/rihappy.tangara@gmail.com" 
+        method="POST" 
+        enctype="multipart/form-data"
+      >
+        <label for="nome">Nome Completo</label>
+        <input 
+          type="text" 
+          id="nome" 
+          name="nome_completo" 
+          required 
+        />
+
+        <label for="telefone">Telefone para contato</label>
+        <input 
+          type="tel" 
+          id="telefone" 
+          name="telefone_contato" 
+          required 
+        />
+
+        <label for="foto">Foto do Participante</label>
+        <input 
+          type="file" 
+          id="foto" 
+          name="foto" 
+          accept="image/*" 
+          required 
+        />
+
+        <p class="aviso">
+          Os três campos são obrigatórios. O envio só será permitido com Nome Completo, Telefone para contato e Foto do Participante.
+        </p>
+
+        <button type="submit">Enviar Cadastro</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
