@@ -182,44 +182,59 @@
     <section class="formulario">
       <h2>Formulário de Cadastro</h2>
 
-      <form 
-        action="https://submify.vercel.app/rihappy.tangara@gmail.com" 
-        method="POST" 
-        enctype="multipart/form-data"
-      >
-        <input type="hidden" name="_next" value="https://rihappytangara.github.io/hotwheels/inscricao-recebida.html" />
+<form 
+  action="https://formsubmit.co/rihappy.tangara@gmail.com" 
+  method="POST" 
+  enctype="multipart/form-data"
+>
+  <!-- Redirecionamento após envio -->
+  <input 
+    type="hidden" 
+    name="_next" 
+    value="https://rihappytangara.github.io/hotwheels/inscricao-recebida.html"
+  />
 
-        <label for="nome">Nome Completo</label>
-        <input 
-          type="text" 
-          id="nome" 
-          name="nome_completo" 
-          required 
-        />
+  <!-- Desabilita captcha -->
+  <input type="hidden" name="_captcha" value="false">
 
-        <label for="telefone">Telefone para contato</label>
-        <input 
-          type="tel" 
-          id="telefone" 
-          name="telefone_contato" 
-          required 
-        />
+  <!-- Assunto do email -->
+  <input 
+    type="hidden" 
+    name="_subject" 
+    value="Novo cadastro - Evento Hot Wheels"
+  />
 
-        <label for="foto">Foto do Participante</label>
-        <input 
-          type="file" 
-          id="foto" 
-          name="foto" 
-          accept="image/*" 
-          required 
-        />
+  <label for="nome">Nome Completo</label>
+  <input 
+    type="text" 
+    id="nome" 
+    name="nome_completo" 
+    required 
+  />
 
-        <p class="aviso">
-          Os três campos são obrigatórios. O envio só será permitido com Nome Completo, Telefone para contato e Foto do Participante.
-        </p>
+  <label for="telefone">Telefone para contato</label>
+  <input 
+    type="tel" 
+    id="telefone" 
+    name="telefone_contato" 
+    required 
+  />
 
-        <button type="submit">Enviar Cadastro</button>
-      </form>
+  <label for="foto">Foto do Participante</label>
+  <input 
+    type="file" 
+    id="foto" 
+    name="attachment" 
+    accept="image/*" 
+    required 
+  />
+
+  <p class="aviso">
+    Os três campos são obrigatórios. O envio só será permitido com Nome Completo, Telefone para contato e Foto do Participante.
+  </p>
+
+  <button type="submit">Enviar Cadastro</button>
+</form>
     </section>
   </div>
 </body>
