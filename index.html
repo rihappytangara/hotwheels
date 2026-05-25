@@ -183,32 +183,31 @@
       <h2>Formulário de Cadastro</h2>
 
 <form 
-  action="https://formsubmit.co/rihappy.tangara@gmail.com" 
+  action="https://forminit.com/f/g29a19asfgx" 
   method="POST" 
   enctype="multipart/form-data"
+  id="formularioHotWheels"
 >
+
   <!-- Redirecionamento após envio -->
   <input 
     type="hidden" 
-    name="_next" 
+    name="_redirect" 
     value="https://rihappytangara.github.io/hotwheels/inscricao-recebida.html"
   />
 
-  <!-- Desabilita captcha -->
-  <input type="hidden" name="_captcha" value="false">
-
-  <!-- Assunto do email -->
+  <!-- Anti spam -->
   <input 
     type="hidden" 
-    name="_subject" 
-    value="Novo cadastro - Evento Hot Wheels"
-  />
+    name="_gotcha" 
+    style="display:none !important"
+  >
 
   <label for="nome">Nome Completo</label>
   <input 
     type="text" 
     id="nome" 
-    name="nome_completo" 
+    name="fi-sender-fullName" 
     required 
   />
 
@@ -216,7 +215,10 @@
   <input 
     type="tel" 
     id="telefone" 
-    name="telefone_contato" 
+    name="fi-phone-contact"
+    value="+55"
+    placeholder="+5511999999999"
+    maxlength="14"
     required 
   />
 
@@ -224,7 +226,7 @@
   <input 
     type="file" 
     id="foto" 
-    name="attachment" 
+    name="fi-file-fotoParticipante" 
     accept="image/*" 
     required 
   />
@@ -237,6 +239,56 @@
 </form>
     </section>
   </div>
+
+  <script>
+
+    const form = document.getElementById("formularioHotWheels");
+
+    const telefoneInput = document.getElementById("telefone");
+
+    telefoneInput.addEventListener("input", function () {
+
+      let numeros = this.value.replace(/\D/g, "");
+
+      if (!numeros.startsWith("55")) {
+        numeros = "55" + numeros;
+      }
+
+      numeros = numeros.substring(0, 13);
+
+      this.value = "+" + numeros;
+    });
+
+    form.addEventListener("submit", function(event) {
+
+      const telefone = telefoneInput.value;
+
+      const regexTelefone = /^\+55\d{10,11}$/;
+
+      if (!regexTelefone.test(telefone)) {
+
+        event.preventDefault();
+
+        alert(
+          "Digite um telefone válido no formato internacional: +5511999999999"
+        );
+
+        telefoneInput.focus();
+
+        return;
+      }
+
+    });
+
+    form.addEventListener("reset", function() {
+
+      setTimeout(() => {
+        telefoneInput.value = "+55";
+      }, 0);
+
+    });
+
+  </script>
+
 </body>
-</html>
 </html>
